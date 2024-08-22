@@ -1,0 +1,19 @@
+//java program to determine JFrames
+import javaX.string.JFrame;
+import java.awt.Graphics;
+import java.awt.Canvas;
+public class HelloworldCanvas extends Canvas
+{
+public void paint(Graphics g)
+{
+g.drawString("Helloworld",30,50);
+}
+public static void main(String args[])
+{
+JFrame f= new JFrame();
+f.add(obj);
+f.setSize(200,300);
+f.setVisible(True);
+
+}
+}

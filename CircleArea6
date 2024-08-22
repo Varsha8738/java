@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+class CircleArea6{
+    double r;
+
+    CircleArea6() {
+        r = 0;
+    }
+
+    CircleArea6(double c) {
+        r = c;
+    }
+
+    double area() {
+        return (22.0 / 7.0) * r * r;
+    }
+
+    void setCircle(double r) {
+        this.r = r;
+    }
+}
+
+public class CircleMain {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        CircleArea6 obj1 = new CircleArea6();
+        CircleArea6 obj2 = new CircleArea6();
+        
+        double radius1 = sc.nextDouble();
+        double radius2 = sc.nextDouble();
+        
+        obj1.setCircle(radius1);
+        obj2.setCircle(radius2);
+        
+        System.out.println("Area of the first circle is " + obj1.area());
+        System.out.println("Area of the second circle is " + obj2.area());
+    }
+}

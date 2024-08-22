@@ -1,0 +1,40 @@
+import java.io.*;
+import java.util.Scanner;
+
+
+class CircleArea2 {
+    double r; // Radius of the circle
+
+   
+    double area() {
+        return 22/7* r * r; 
+    }
+}
+
+public class CircleMain {
+    public static void main(String[] args) {
+        // Create instances of CircleArea2 for two circles
+        CircleArea2 ca1 = new CircleArea2();
+        CircleArea2 ca2 = new CircleArea2();
+        
+        // Create a Scanner object to read input
+        Scanner sc = new Scanner(System.in);
+
+        // Prompt user for the radius of the first circle
+        System.out.println("Enter radius of the first circle:");
+        ca1.r = sc.nextDouble();
+        
+        // Prompt user for the radius of the second circle
+        System.out.println("Enter radius of the second circle:");
+        ca2.r = sc.nextDouble();
+        
+        // Calculate and display the area of the first circle
+        System.out.println("Area of the first circle: " + ca1.area());
+        
+        // Calculate and display the area of the second circle
+        System.out.println("Area of the second circle: " + ca2.area());
+
+        // Close the scanner to avoid resource leaks
+        sc.close();
+    }
+}

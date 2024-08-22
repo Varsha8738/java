@@ -1,0 +1,17 @@
+//java program to demonstrate output formatting by using format() method
+import java.io.*;
+import java.text.DecimalFormat;
+public class FormattedOutput
+{
+public static void main(String args[]){
+double x=123.45678;
+System.out.printf("The number is:%lf",x);
+DecimalFormat df= new DecimalFormat(####);
+System.out.println("\n Without fractional path the number is"+x);
+System.out.println("Without fractional path the number is"+df.Format(x));
+DecimalFormat df=new DecimalFormat(#.###);
+System.out.println("\n Formatted number with precistioh is:"+df.Format(x));
+df=new DecimalFormat("$####,####.##");
+System.out.println("\n After formatting the value is"+df.Format(x));
+}
+}

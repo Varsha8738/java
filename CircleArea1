@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.Scanner;
+import java.lang.Math;
+
+class CircleArea {
+    double x, y; // Center of the circle
+    double r;    // Radius of the circle
+
+    double area() {
+        return Math.PI * r * r; // Calculate the area of the circle using Math.PI
+    }
+}
+
+public class CircleMain {
+    public static void main(String[] args) {
+        CircleArea ca = new CircleArea();
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the x-coordinate of the center: ");
+        ca.x = sc.nextDouble();
+
+        System.out.print("Enter the y-coordinate of the center: ");
+        ca.y = sc.nextDouble();
+
+        // Calculate the radius based on the distance from the origin (0,0) to the point (x,y)
+        ca.r = Math.sqrt(ca.x * ca.x + ca.y * ca.y);
+
+        System.out.println("Radius of the circle is: " + ca.r);
+        System.out.println("Area of the circle is: " + ca.area());
+    }
+}

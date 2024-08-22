@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.Scanner;  
+
+class CircleArea4 {
+    double  r;
+    double area() {
+        return (22.0 / 7.0) * r * r;
+    }
+    void SetCircle(double r) {
+        this.r = r;
+    }
+}
+
+// Main class where the program starts
+public class Circlemain {
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);  // Initialize the Scanner object
+
+        CircleArea4 obj1 = new CircleArea4();
+        CircleArea4 obj2 = new CircleArea4();
+
+        System.out.println("Enter radius of first circle:");
+        double radius1 = sc.nextDouble();
+
+        System.out.println("Enter radius of second circle:");
+        double radius2 = sc.nextDouble();
+
+        obj1.SetCircle(radius1);
+        obj2.SetCircle(radius2);
+
+        // Calculate and display the areas of the circles
+        System.out.println("Area of first circle is " + obj1.area());
+        System.out.println("Area of second circle is " + obj2.area());
+    }
+}

@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+class CircleArea3
+{
+double x,y,r;
+double area()
+{
+return 22/7*r*r;
+}
+}
+void SetCircle(double a,double b,double c) //parameters
+{
+x=a;
+y=b;
+r=c;
+public static void main(String args[])
+{
+Scanner sc= new Scanner(System.in);
+ob1.SetCircle(x=3.0,y=4.0,r=100.0);
+ob2.SetCircle(x=6.0,y=7.0,r=150.0);
+System.out.println("Area of circle is" +obj1.area());
+System.out.println("Area of circle is" +obj2.area());
+}
+}

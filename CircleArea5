@@ -1,42 +1,40 @@
-import java.io.*;
-import java.util.*;
-class CircleArea5
-{
-    double x,y,r;
-    CircleArea();
-    {
-        x=0;
-        y=0;
-        r=0;
+import java.util.Scanner;
+class CircleArea7 {
+    double x, y, r;
+ // Constructor to initialize x, y, and r
+    CircleArea7() {
+        x = 0;
+        y = 0;
+        r = 0;
     }
-    double area()
-    {
-        return(22.0/7.0)*r*r;
-        void SetCircle(double r)
-        {
-            this.r =r;
-        }
+ // Method to calculate the area of the circle
+    double calculateArea() {
+        return (22.0 / 7.0) * r * r;
     }
-    public class CircleMain2
-    {
-        public static void main(String args[])
-        {
-            Scanner sc = new Scanner(System.in);
-            CircleArea5 obj1 = new CircleArea5();
-            CircleArea5 obj2 = new CircleArea5();
 
-        System.out.println("Enter radius of first circle:");
-        double radius1 = sc.nextDouble();
-
-        System.out.println("Enter radius of second circle:");
-        double radius2 = sc.nextDouble();
-
-        obj1.SetCircle(radius1);
-        obj2.SetCircle(radius2);
-
-        // Calculate and display the areas of the circles
-        System.out.println("Area of first circle is " + obj1.area());
-        System.out.println("Area of second circle is " + obj2.area());
-        }
+    // Method to set the radius of the circle
+    void setCircle(double r) {
+        this.r = r;
     }
 }
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Create first CircleArea7 object
+        CircleArea7 obj1 = new CircleArea7();
+        System.out.println("Enter the radius of the first circle:");
+        double radius1 = sc.nextDouble();
+        obj1.setCircle(radius1);  // Set the radius for the first circle
+        System.out.println("Area of the first circle is: " + obj1.calculateArea());
+
+        // Create second CircleArea7 object
+        CircleArea7 obj2 = new CircleArea7();
+        System.out.println("Enter the radius of the second circle:");
+        double radius2 = sc.nextDouble();
+        obj2.setCircle(radius2);  // Set the radius for the second circle
+        System.out.println("Area of the second circle is: " + obj2.calculateArea());
+    }
+}
+
